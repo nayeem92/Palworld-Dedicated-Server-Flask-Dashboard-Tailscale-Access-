@@ -135,13 +135,40 @@ sudo systemctl start palworld.service paldashboard.service
 
 ---
 
-## Tailscale Setup (Brief)
-Install Tailscale on your server and your devices, authenticate, and grab the Tailscale IP.
+## Tailscale Setup (Why & How)
 
-Once connected, access the dashboard from any authorized device:
+Tailscale creates a private and secure mesh VPN that connects your devices. This allows you to access your Palworld server and dashboard remotely without needing to forward ports or configure your router.
+
+### Why Tailscale?
+- **No port forwarding or public IP required**
+- **Secure**: All traffic is encrypted end-to-end
+- **Accessible from anywhere**
+- **Simple to share access with friends**
+
+### 1. Install Tailscale on Ubuntu Server
+```bash
+curl -fsSL https://tailscale.com/install.sh | sh
+sudo tailscale up
 ```
-http://<tailscale-ip>:5000
+This will open a link in the terminal. Visit it in a browser to authenticate with your Tailscale account.
+
+### 2. Install Tailscale on Your Device (e.g., Windows or Android)
+Go to [https://tailscale.com/download](https://tailscale.com/download) and install the app on your device. Login with the same account.
+
+### 3. Find the Server’s Tailscale IP
+```bash
+tailscale ip
 ```
+You will get an IP like `100.x.x.x`. Use this IP to:
+- Connect to the Flask dashboard: `http://100.x.x.x:5000`
+- Join the Palworld server in-game: `100.x.x.x:8211`
+
+### 4. Let Friends Join
+To allow friends to access the server:
+- Have them install Tailscale and log in.
+- Invite them to your Tailscale network from the [Admin Console](https://login.tailscale.com/admin/machines).
+- Once connected, they can access the game and dashboard using your server's Tailscale IP.
+
 
 Use the same IP + port 8211 to join Palworld.
 
