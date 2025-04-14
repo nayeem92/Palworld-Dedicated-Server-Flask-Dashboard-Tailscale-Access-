@@ -59,7 +59,6 @@ screen -S palworld ./PalServer.sh
 ## Flask Dashboard Setup
 
 ![alt text](/screenshots/image-1.png)
-![alt text](/screenshots/image-3.png)
 
 ### 1. Clone the Dashboard
 ```bash
@@ -131,7 +130,8 @@ sudo systemctl start palworld.service paldashboard.service
 ---
 
 ![alt text](/screenshots/image-4.png)
-
+---
+![alt text](/screenshots/image-3.png)
 
 ---
 
