@@ -96,7 +96,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/screen -dmS palworld bash -c 'cd /home/nayeem/palworld_053/server && ./PalServer.sh'
+ExecStart=/usr/bin/screen -dmS palworld bash -c 'cd /home/<user-name>/palworld_053/server && ./PalServer.sh'
 Restart=always
 
 [Install]
@@ -113,7 +113,7 @@ After=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=/home/nayeem/palworld_dashboard_tailscale
+WorkingDirectory=/home/<user-name>/palworld_dashboard_tailscale
 ExecStart=/usr/bin/python3 app.py
 Restart=always
 
