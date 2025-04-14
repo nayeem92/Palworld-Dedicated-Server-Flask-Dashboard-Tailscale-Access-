@@ -9,7 +9,7 @@ This project allows you to self-host a **Palworld dedicated server** on a local 
 ## Features
 - Host your own Palworld server (v0.5.3)
 - Start/Stop/Restart server from a web dashboard
-- Change server settings like EXP rate, difficulty, stamina drain, etc.
+- Change server settings like EXP rate, difficulty, stamina drain, etc. in a user friendly dashboard instead of CLI
 - Backup game saves with one click
 - Access the server dashboard from anywhere via Tailscale
 
@@ -81,8 +81,9 @@ Access it from: `http://<your-ip>:5000`
 
 ---
 
-## Systemd Services (Optional)
-To run automatically after reboot:
+## Systemd Services (Automation)
+If you just want to jump straight into the game, simply power on your Ubuntu machine — the server starts automatically, no manual steps needed.
+To run automatically:
 
 ### Create systemd files:
 ```bash
